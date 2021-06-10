@@ -3,21 +3,14 @@ public abstract class Pessoa {
     private String nome;
     private String identidade;
     private String nascimento;
-    private String endereco;
-    Pessoa(int id, String nome, String identidade, String nascimento, String endereco) {
-        setId(id);
-        setNome(nome);
-        setIdentidade(identidade);
-        setNascimento(nascimento);
-        setEndereco(endereco);
-    }
-    public String getEndereco() {
-        return endereco;
+    //ÓDIO
+    Pessoa(int id, String nome, String identidade, String nascimento){
+        this.id = id;
+        this.nome = nome;
+        this.identidade = identidade;
+        this.nascimento = nascimento;
     }
 
-    public void setEndereco(String endereco) {
-        this.endereco = endereco;
-    }
     public String getNome(){
         return this.nome;
     }
