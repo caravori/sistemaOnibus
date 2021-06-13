@@ -1,3 +1,5 @@
+import javax.xml.crypto.Data;
+
 public class DataHora{
     private int horas;
     private int minutos;
@@ -5,7 +7,10 @@ public class DataHora{
     private int dia;
     private int mes;
     private int ano;
-
+    public DataHora(){
+        setHorario(-1,-1);
+        setData(-1,-1,-1);
+    }
     public DataHora(int horas, int minutos, int dia, int mes, int ano){
         setHorario(horas, minutos);
         setData(dia, mes, ano);

@@ -1,27 +1,27 @@
-import java.util.ArrayList;
-public class Onibus {
-    ArrayList <String> rota = new ArrayList<>();
-    private String motorista;
+public class Onibus{
+    private int idRota;
     private String modelo;
     private String placa;
     private String ano;
     private String kilometragem;
 
 
-    Onibus(String motorista, String modelo, String placa, int ano, float km){
-        setMotorista(motorista);
+    Onibus(int idRota, String modelo, String placa, String ano, String km){
+        setMotorista(idRota);
         setModelo(modelo);
         setPlaca(placa);
         setAno(ano);
         setKilometragem(km);
     }
+    Onibus(){
 
-    public String getMotorista() {
-        return motorista;
+    }
+    public int getMotorista() {
+        return this.idRota;
     }
 
-    public void setMotorista(String motorista) {
-        this.motorista = motorista;
+    public void setMotorista(int motorista) {
+        this.idRota = motorista;
     }
 
     public String getModelo() {
