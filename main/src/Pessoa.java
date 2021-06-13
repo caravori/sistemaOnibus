@@ -3,12 +3,14 @@ public abstract class Pessoa {
     private String nome;
     private String identidade;
     private String nascimento;
+    private String endereco;
     //ÓDIO
-    Pessoa(int id, String nome, String identidade, String nascimento){
+    Pessoa(int id, String nome, String identidade, String nascimento, String endereco){
         this.id = id;
         this.nome = nome;
         this.identidade = identidade;
         this.nascimento = nascimento;
+        this.endereco = endereco;
     }
 
     public String getNome(){
@@ -34,5 +36,11 @@ public abstract class Pessoa {
     }
     public void setId(int n){
         this.id = n;
+    }
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+    public String getEndereco(){
+        return this.endereco;
     }
 }

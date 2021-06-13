@@ -4,8 +4,8 @@ public class Onibus {
     private String motorista;
     private String modelo;
     private String placa;
-    private int ano;
-    private float kilometragem;
+    private String ano;
+    private String kilometragem;
 
 
     Onibus(String motorista, String modelo, String placa, int ano, float km){
@@ -40,41 +40,53 @@ public class Onibus {
         this.placa = placa;
     }
 
-    public int getAno() {
+    public String getAno() {
         return ano;
     }
 
-    public void setAno(int ano) {
+    public void setAno(String ano) {
         this.ano = ano;
     }
 
-    public float getKilometragem() {
+    public String getKilometragem() {
         return kilometragem;
     }
 
-    public void setKilometragem(float kilometragem) {
+    public void setKilometragem(String kilometragem) {
         this.kilometragem = kilometragem;
     }
-    float[][] h = new float[4][10];
+    int[][] h = new int[5][11];
 
     int i,b;
     public void initCadeiras(){
-        for(i = 0;i<10;i++) {
-            for (b = 0; b < 4; b++) {
-                h[b][i] = 0;
+        for(i = 1;i<=10;i++) {
+            for (b = 1; b <= 4; b++) {
+                this.h[b][i] = 0;
             }
         }
     }
 
-    public void setRota(String cid1,String cid2,String cid3,String cid4,String cid5){
-        rota.add(cid1);
-        rota.add(cid2);
-        rota.add(cid3);
-        rota.add(cid4);
-        rota.add(cid5);
-        System.out.println("\nDigite o horario de ida");
+    public void setCadeira(int b,int i,int id){
+        this.h[i][b]=id;
     }
-    public ArrayList<String> getRota(){
-        return rota;
+
+    public float getCadeira(int b,int i){
+        return this.h[i][b];
+    }
+
+    public void printCadeiras(){
+        for(i = 1;i<=10;i++) {
+            System.out.print("["+(i)+"]");
+            for (b = 1; b <= 4; b++) {
+                if(this.h[b][i]>0){
+                    System.out.print("1");
+                }
+                else{
+                    System.out.print("0");
+                }
+                System.out.print(" ");
+            }
+            System.out.println();
+        }
     }
 }
